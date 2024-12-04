@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Типы виз - MyVisa</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-image: url('https://www.factroom.ru/wp-content/uploads/2021/03/1-8-2048x1292.jpg'); /* Замените на URL вашего изображения */
+            background-repeat: no-repeat; /* Убираем повторение изображения */
+            background-size: cover; /* Изображение будет покрывать весь фон */
+            background-attachment: fixed; /* Фиксируем изображение при прокрутке */
+        }
+        header {
+            background-color: #33659b; /* Цвет хедера */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для хедера */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: white; /* Цвет текста ссылки */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-size: 1.2em; /* Размер текста ссылки */
+            transition: color 0.3s; /* Плавный переход цвета при наведении */
+        }
+        .home-link:hover {
+            color: #e0e0e0; /* Цвет текста при наведении */
+        }
+        .visa-container {
+            padding: 20px;
+            max-width: 800px; /* Максимальная ширина контейнера с новостями */
+            margin: auto; /* Центрирование контейнера */
+            background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон контейнера для лучшей читаемости */
+            border-radius: 8px; /* Скругление углов */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+        }
+        .visa-type {
+            margin-bottom: 30px; /* Уменьшенное расстояние между типами виз */
+            border-bottom: 1px solid #e0e0e0; /* Разделительная линия между типами виз */
+            padding-bottom: 10px; /* Уменьшенный отступ снизу */
+        }
+        .visa-type:last-child {
+            border-bottom: none; /* Убираем разделитель у последнего элемента */
+        }
+        h3 {
+            cursor: pointer; /* Указатель при наведении на заголовок долгосрочной визы */
+        }
+        h2 {
+            color: #33659b; /* Цвет заголовков второго уровня */
+            margin-top: 30px; /* Уменьшенный отступ сверху для заголовков второго уровня */
+        }
+        ul {
+            list-style-type: disc; /* Стилизация списка */
+            padding-left: 20px; /* Отступ слева для списка */
+        }
+        p {
+            line-height: 1.5; /* Уменьшенный межстрочный интервал для удобства чтения */
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px; /* Уменьшенный отступ сверху для кнопки "Назад" */
+            padding: 10px 20px;
+            background-color: #33659b; /* Цвет кнопки */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px; /* Скругление углов кнопки */
+            text-align: center; /* Центрирование текста кнопки */
+            transition: background-color 0.3s; /* Плавный переход цвета кнопки при наведении */
+        }
+        .back-button:hover {
+            background-color: #285a8c; /* Цвет кнопки при наведении */
+        }
+
+        .dropdown-content {
+            display: none; 
+            margin-top: 10px; 
+            background-color: white; 
+            border-radius: 5px; 
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2); 
+            padding: 10px; 
+        }
+
+    </style>
+    <script>
+        function toggleDropdown() {
+            var content = document.getElementById("longTermVisaDetails");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+                // Закрываем другие раскрывающиеся списки
+                var otherContents = document.querySelectorAll('.dropdown-content');
+                otherContents.forEach(function(item) {
+                    if (item !== content) item.style.display = 'none';
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>MyVisa - Визы</h1>
+        <nav>
+            <a href="news.html">Главная</a> <!-- Переход на главную страницу -->
+        
+        </nav>
+    </header>
+    <div class="visa-container">
+        <h2>Основные типы виз</h2>
+
+        <div class="visa-type">
+            <h3>Транзитная виза (Тип B)</h3>
+            <p>Транзитная виза предназначена для тех, кто проезжает через страну на пути к другому месту назначения. Она может быть однократной, двукратной или многократной и позволяет находиться на территории страны не более двух суток с момента въезда.</p>
+        </div>
+
+        <div class="visa-type">
+            <h3>Краткосрочная виза (Тип C)</h3>
+            <p>Краткосрочная виза предназначена для временного пребывания в стране на срок до 90 дней. Она может быть выдана для туризма, деловых поездок или посещения родственников и друзей.</p>
+        </div>
+
+        <div class="visa-type">
+            <h3 onclick="toggleDropdown()">Долгосрочная виза (Тип D) <p style="font-size:.9em;color:#666;">*Нажмите, чтобы просмотреть типы долгострочных виз*</p>
+            </h3>
+            <p>Долгосрочная виза позволяет иностранным гражданам находиться на территории страны более чем на 90 дней и может быть выдана на срок до пяти лет. Она подходит для различных целей, таких как работа, учеба или воссоединение с семьей.</p>
+
+            <div id="longTermVisaDetails" class="dropdown-content">
+                <h4>Туристическая виза</h4>
+                <p>Предназначена для тех, кто планирует длительное пребывание с целью туризма и отдыха. Обычно требуется подтверждение бронирования отелей и обратного билета.</p>
+
+                <h4>Рабочая виза</h4>
+                <p>Позволяет иностранным гражданам работать на территории страны на определенных условиях. Для получения рабочей визы часто требуется наличие предложения о работе от местного работодателя.</p>
+
+                <h4>Студенческая виза</h4>
+                <p>Предназначена для иностранных студентов, желающих учиться в учебных заведениях страны. Обычно необходимо предоставить документы о зачислении в учебное заведение и финансовую состоятельность.</p>
+                
+                <!-- Добавить дополнительные типы долгосрочных виз по мере необходимости -->
+                
+                <!-- Примечание о закрытии списка -->
+                <p style="font-size:.9em;color:#666;">*Нажмите снова, чтобы закрыть этот раздел.*</p>
+                
+             </div>
+            
+         </div>
+
+         <h2>Сроки оформления виз</h2>
+         <ul>
+             <li><strong>Транзитная виза:</strong> Обычно оформляется в течение 5-10 рабочих дней.</li>
+             <li><strong>Краткосрочная виза:</strong> Оформление занимает от 5 до 15 рабочих дней.</li>
+             <li><strong>Долгосрочная виза:</strong> Процесс может занять от 10 до 30 рабочих дней.</li>
+         </ul>
+
+         <h2>Дополнительная информация</h2>
+         <p>Для получения визы необходимо предоставить ряд документов, включая приглашение, паспорт и фотографии. Конкретные требования могут варьироваться в зависимости от страны назначения.</p>
+
+         <!-- Кнопка "Назад" -->
+         <a href="javascript:void(0);" onclick="window.history.back();" class="back-button">Назад</a>
+
+     </div>
+
+ </body>
+ </html>

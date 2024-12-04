@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход пользователя - MyVisa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Обеспечиваем полную высоту страницы */
+        }
+        header {
+            background-color: #33659b; /* Цвет хедера */
+            color: white;
+            padding: 20px;
+            text-align: center; /* Центрируем текст */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение кнопок */
+            align-items: center; /* Центрирование кнопок */
+            justify-content: center; /* Центрирование кнопок по вертикали */
+            flex-grow: 1; /* Занимаем оставшееся пространство */
+            gap: 20px; /* Расстояние между кнопками */
+        }
+        button {
+            padding: 15px; /* Увеличенный отступ для кнопок */
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #33659b; /* Цвет кнопок такой же, как у хедера */
+            color: white;
+            width: 250px; /* Фиксированная ширина для всех кнопок */
+            transition: background-color 0.3s, transform 0.3s; /* Плавный переход цвета и эффекта при наведении */
+        }
+        button:hover {
+            background-color: #0056b3; /* Темнее при наведении */
+            transform: scale(1.05); /* Увеличение кнопки при наведении */
+        }
+        footer {
+            text-align: center; /* Центрируем текст в футере */
+            margin-top: auto; /* Футер будет внизу страницы */
+            padding: 10px;
+            background-color: #33659b; /* Цвет футера такой же, как у хедера */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyVisa</h1> <!-- Название сайта -->
+    </header>
+
+    <div class="button-container">
+        <button onclick="window.location.href='check_status.html'">Просмотреть статус заявки</button>
+        <button onclick="window.location.href='consultation.html'">Записаться на консультацию</button>
+        <button onclick="window.location.href='visa.html'">Подать заявку на оформление визы</button>
+        <button onclick="window.location.href='news.html'">Просмотреть информацию сайта</button>
+        <button onclick="window.location.href='index.html'">Выход</button>
+    </div>
+
+    <footer>
+        &copy; 2024 MyVisa. Все права защищены.
+    </footer>
+
+    <script>
+        // Здесь можно добавить функциональность для каждой кнопки, если необходимо
+    </script>
+</body>
+</html>

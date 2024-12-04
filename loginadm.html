@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - MyVisa</title>
+    <style> 
+       body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-image: url('https://itcrumbs.ru/wp-content/uploads/2017/12/Server-dlya-malogo-biznesa.jpg'); /* Замените на URL вашего изображения */
+            background-repeat: no-repeat; /* Убираем повторение изображения */
+            background-size: cover; /* Изображение будет покрывать весь фон */
+            background-attachment: fixed; /* Фиксируем изображение при прокрутке */
+        }
+        header {
+            background-color: #33659b; /* Цвет хедера */
+            color: white;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .login-container {
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для читаемости */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input {
+            width: calc(100% - 20px); /* Увеличение ширины с учетом отступов */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 402px; /* Ширина кнопки подстраивается под контейнер */
+            padding: 10px;
+            background-color: #33659b; /* Цвет кнопки */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3; /* Темнее при наведении */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyVisa</h1>
+        <nav>
+            <a href="index.html">Главная</a> <!-- Ссылка на главную страницу -->
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Войти как администратор</h2> <!-- Заголовок для администратора -->
+        <form id="adminLoginForm"> <!-- ID формы для администратора -->
+            <input type="email" id="adminEmail" placeholder="Email" required> <!-- Поле для ввода email администратора -->
+            <input type="password" id="adminPassword" placeholder="Пароль" required> <!-- Поле для ввода пароля администратора -->
+            <button utton onclick="window.location.href='adminfunc.html'">Войти</button> <!-- Кнопка для отправки формы -->
+        </form>
+    </div>
+</body>
+</html>

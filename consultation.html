@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на консультацию - MyVisa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-image: url('https://dmitryveselov.ru/wp-content/uploads/konsultacii.jpg'); /* Замените на URL вашего изображения */
+            background-repeat: no-repeat; /* Убираем повторение изображения */
+            background-size: cover; /* Изображение будет покрывать весь фон */
+            background-attachment: fixed; /* Фиксируем изображение при прокрутке */
+        }
+        header {
+            background-color: rgba(51, 101, 155, 0.9); /* Полупрозрачный цвет хедера */
+            color: white;
+            padding: 20px;
+            text-align: center; /* Используем Flexbox для расположения элементов в строку */
+            justify-content: space-between; /* Распределяем пространство между элементами */
+            align-items: center; /* Центрируем элементы по вертикали */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .form-container {
+            max-width: 600px; /* Максимальная ширина контейнера с формой */
+            margin: 40px auto; /* Центрирование контейнера */
+            background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для контейнера */
+            padding: 20px; /* Отступы внутри контейнера */
+            border-radius: 5px; /* Закругленные углы */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+        }
+        h2 {
+            text-align: center; /* Центрирование заголовка формы */
+            color: #33659b; /* Цвет заголовка формы */
+        }
+         select {
+            width: calc(100%); /* Ширина с учетом отступов */
+            padding: 10px; /* Отступ внутри полей ввода */
+            margin-bottom: 15px; /* Отступ снизу для полей ввода */
+            border-radius: 5px; /* Закругленные углы для полей ввода */
+            border: 1px solid #ccc; /* Граница для полей ввода */
+        }
+        input{
+            width: calc(100% - 20px); /* Ширина с учетом отступов */
+            padding: 10px; /* Отступ внутри полей ввода */
+            margin-bottom: 15px; /* Отступ снизу для полей ввода */
+            border-radius: 5px; /* Закругленные углы для полей ввода */
+            border: 1px solid #ccc; /* Граница для полей ввода */
+        }
+        button {
+            padding: 15px; /* Увеличенный отступ для кнопок */
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #33659b; /* Цвет кнопок */
+            color: white;
+            width: calc(100% ); /* Ширина кнопки с учетом отступов */
+            margin-bottom: 15px; /* Добавляем отступ между кнопками */
+        }
+        button:hover {
+            background-color: #274d66; /* Темнее при наведении */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyVisa</h1> <!-- Название сайта -->
+    </header>
+
+    <div class="form-container">
+        <h2>Запись на консультацию</h2> <!-- Заголовок формы -->
+        
+        <form id="consultationForm">
+            <input type="text" id="fullName" placeholder="ФИО" required>
+            
+            <label for="consultationType">Тип консультации:</label>
+            <select id="consultationType" required>
+                <option value="">Выберите тип консультации</option>
+                <option value="visa">Консультация по визам</option>
+                <option value="immigration">Иммиграционные вопросы</option>
+                <option value="travel">Путешествия и туризм</option>
+                <option value="study">Учебные визы и программы</option>
+                <!-- Добавьте больше типов консультаций по мере необходимости -->
+            </select>
+
+            <label for="consultationDate">Дата консультации:</label>
+            <input type="date" id="consultationDate" required>
+        
+            <button type="submit">Записаться на консультацию</button> <!-- Кнопка отправки формы -->
+            
+         <!-- Кнопка выхода на главную -->
+         <button type="button" onclick="window.location.href='userfunc.html'">Выход на главную</button> 
+         
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('consultationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Отменяем стандартное поведение формы
+
+            // Получаем значение ФИО
+            const fullName = document.getElementById('fullName').value.trim();
+
+            // Проверка формата ФИО (например, "Иванов Иван Иванович")
+            const nameRegex = /^[А-ЯЁ][а-яё]+\s[А-ЯЁ][а-яё]+\s[А-ЯЁ][а-яё]+$/;
+
+            // Проверка ФИО
+            if (!nameRegex.test(fullName)) {
+                alert("Пожалуйста, введите корректное ФИО в формате 'Фамилия Имя Отчество'.");
+                return;
+            }
+
+           // Если все проверки пройдены
+           alert("Вы успешно записаны на консультацию!"); // Сообщение об успешной записи
+           this.reset(); // Сброс формы
+       });
+    </script>
+</body>
+</html>

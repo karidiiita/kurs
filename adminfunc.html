@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль администратора - MyVisa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #33659b; /* Цвет хедера */
+            color: white;
+            padding: 20px;
+            text-align: center; /* Используем Flexbox для расположения элементов в строку */
+            justify-content: space-between; /* Распределяем пространство между элементами */
+            align-items: center; /* Центрируем элементы по вертикали */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение кнопок */
+            align-items: center; /* Центрирование кнопок */
+            justify-content: center; /* Центрирование кнопок по вертикали */
+            height: calc(100vh - 150px); /* Высота, чтобы кнопки были по центру */
+            gap: 20px; /* Расстояние между кнопками */
+        }
+        button {
+            padding: 15px; /* Увеличенный отступ для кнопок */
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #33659b; /* Цвет кнопок такой же, как у хедера */
+            color: white;
+            width: 250px; /* Фиксированная ширина для всех кнопок */
+        }
+        button:hover {
+            background-color: #0056b3; /* Темнее при наведении */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+        <h1>MyVisa</h1> <!-- Название сайта -->
+    </nav>
+    </header>
+
+    <div class="button-container">
+        <button onclick="window.location.href='user_management.html'">Работа с пользователями</button>
+        <button onclick="window.location.href='appointment_management.html'">Работа с записями на прием</button>
+        <button onclick="window.location.href='content_management.html'">Работа с контентом</button>
+        <button onclick="window.location.href='visa_management.html'">Работа с визами</button>
+        <button onclick="window.location.href='index.html'">Выход</button>
+    </div>
+
+    <script>
+        // Здесь можно добавить функциональность для каждой кнопки, если необходимо
+    </script>
+</body>
+</html>

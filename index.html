@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyVisa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-image: url(''); /* Замените на URL вашего изображения */
+            background-repeat: no-repeat; /* Убираем повторение изображения */
+            background-size: cover; /* Изображение будет покрывать весь фон */
+            background-attachment: fixed; /* Фиксируем изображение при прокрутке */
+        }
+        header {
+            background-color: #33659b; /* Цвет хедера */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирование кнопок */
+            justify-content: center; /* Центрирование кнопок по вертикали */
+            height: calc(100vh - 150px); /* Высота, чтобы кнопки были по центру */
+            gap: 20px; /* Расстояние между кнопками */
+        }
+        button {
+            padding: 15px; /* Увеличенный отступ для кнопок */
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #33659b; /* Цвет кнопок такой же, как у хедера */
+            color: white;
+            width: 200px; /* Фиксированная ширина для всех кнопок */
+        }
+        button:hover {
+            background-color: #0056b3; /* Темнее при наведении */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyVisa</h1>
+       
+    </header>
+
+    <div class="button-container">
+        <button onclick="window.location.href='login.html'">Войти как пользователь</button>
+        <button onclick="window.location.href='loginadm.html'">Войти как администратор</button>
+        <button onclick="window.location.href='reg.html'">Зарегистрироваться</button>
+    </div>
+
+    <script>
+        function loginUser() {
+            alert("Пользователь вошел в систему");
+        }
+
+        function loginAdmin() {
+            alert("Администратор вошел в систему");
+        }
+    </script>
+</body>
+</html>
